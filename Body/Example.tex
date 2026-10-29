@@ -1,0 +1,146 @@
+% 你或许需要的：
+
+\BookChapter{ }{  }%%
+\UnnumberedSection{章节备注}{Chapter Notes}
+\begin{bilingualtext}
+\bi{% 中
+
+}{% 英
+
+}
+\end{bilingualtext}%%%%%%
+\UnnumberedSection{正文}{Main Text}
+\begin{bilingualtext}
+
+\end{bilingualtext}%%%%%%
+
+
+
+% \Bignote{正文}{Main Text}
+
+\begin{center}
+\raisebox{5mm}{\rule{0.6\linewidth}{0.4pt}}
+\end{center}
+\vspace{0.3pt}%%%%%%%%%%%
+
+% 段落格式
+\bi{% 中
+
+}{% 英
+
+}
+
+
+\frontmatter
+
+% 封面
+\begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    \vspace*{25mm}
+    {\fontsize{30pt}{36pt}\selectfont 书名}
+    \vspace{8mm}
+    {\fontsize{13pt}{17pt}\selectfont Subtitle}
+    \vfill
+    {\fontsize{11pt}{15pt}\selectfont 作者姓名}
+\end{titlepage}
+
+\cleardoublepage
+
+% 扉页
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{35mm}
+    {\fontsize{25pt}{31pt}\selectfont 书名}
+    \vspace{5mm}
+    {\fontsize{12pt}{16pt}\selectfont Subtitle}
+    \vfill
+    作者姓名
+\end{center}
+
+\cleardoublepage
+
+% 版权页
+\thispagestyle{empty}
+\vspace*{\fill}
+{\small
+\textbf{书名}
+\vspace{4mm}
+
+第一版
+\vspace{4mm}
+
+© 2026 作者姓名
+\vspace{4mm}
+
+All rights reserved.
+\vspace{10mm}
+
+本书内容仅供学习与研究使用。
+}
+\vspace*{25mm}
+
+\cleardoublepage
+
+% 目录
+\tableofcontents
+
+\mainmatter
+
+% 序章
+\BookChapter{序章}{Prologue}
+这里是一段正文。
+这是一条注释示例\footnote{这里就是注释。使用标准的 \texttt{\textbackslash footnote\{\}} 即可，LaTeX 会自动把注释放到当前页面底部。}。
+这里继续正文。
+\vspace{1em}
+\bookdate{2026 年 9 月}
+
+% 第一章
+\BookChapter{第一章：开端}{Chapter One: The Beginning}
+\ifbilingual
+    \begin{bilingualtext}
+        \bi{世界从一个极其微小的瞬间开始。}
+           {The world begins with an extraordinarily small moment.}
+        \bi{有些事情发生以前，谁也不知道它究竟意味着什么。}
+           {Before something happens, no one knows what it will eventually mean.}
+        \bi{我们只能在时间向前移动以后，重新回头理解它。}
+           {We can only look back and understand it after time has moved forward.}
+        \bi{这是一条带有注释的句子\footnote{双语模式下，脚注仍然按照正常的脚注机制处理，并排版在页面底部。}。}
+           {This sentence contains a footnote\footnote{In bilingual mode, footnotes continue to use the standard bottom-of-page mechanism.}.}
+    \end{bilingualtext}
+\else
+    世界从一个极其微小的瞬间开始。
+    有些事情发生以前，谁也不知道它究竟意味着什么。
+    我们只能在时间向前移动以后，重新回头理解它。
+    这是一条带有注释的句子\footnote{这里是普通中文正文中的脚注示例。}。
+\fi
+
+% 第二章
+\BookChapter{第二章：时间}{Chapter Two: Time}
+\BookSection{过去}{The Past}
+\ifbilingual
+    \begin{bilingualtext}
+        \bi{时间并不是一条笔直的线。}
+           {Time is not a straight line.}
+        \bi{当我们重新回忆过去时，过去也会被现在改变。}
+           {When we remember the past, the past itself is changed by the present.}
+    \end{bilingualtext}
+\else
+    时间并不是一条笔直的线。
+    当我们重新回忆过去时，过去也会被现在改变。
+\fi
+\BookSection{现在}{The Present}
+\ifbilingual
+    \begin{bilingualtext}
+        \bi{此刻是唯一真正发生着的事情。}
+           {The present is the only thing that is truly happening.}
+    \end{bilingualtext}
+\else
+    此刻是唯一真正发生着的事情。
+\fi
+
+% 后记
+\backmatter
+\chapter*{后记}
+\addcontentsline{toc}{chapter}{后记}
+这里是后记。
